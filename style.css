@@ -1,0 +1,174 @@
+
+.container{
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+}
+
+body{
+	font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	z-index: 1;
+	position: static;
+}
+
+.container > * {
+	padding: 15px;
+	margin: 15px;
+	flex: 1 100%;
+	border-radius: 10px;
+
+}
+
+
+/*identification*/
+
+.info{
+	margin: 20px 0px 0px 20px;
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: left;
+}
+
+
+.name{
+	margin: 0px 20px 3px;
+}
+
+.verification{
+	opacity: 50%;
+    font-size: 13px;
+    margin: 0px 20px;
+}
+
+.card_user{
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+	
+}
+
+.quotation {
+	position: relative;
+	z-index: -4;
+}
+
+.img_quotation {
+    top: -100px;
+    right: 14%;
+	width: auto;
+	height: 130px;
+	position: absolute;
+
+}
+
+.p1{
+	position: relative;
+	z-index: 3;
+}
+.container1{
+	background-color: hsl(263, 55%, 52%);
+	color: white;
+	z-index: 2;
+	position: relative;
+	
+}
+
+
+.container2{
+	background-color: hsl(217, 19%, 35%);
+	color: white;
+}
+
+.container3{
+	background-color: hsl(0, 0%, 100%);
+	color:hsl(217, 19%, 35%);
+}
+
+.container4{
+	background-color: hsl(219, 29%, 14%);
+	color: white;
+}
+
+.container5{
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(217, 19%, 35%);
+}
+
+/*paragraph*/
+
+.statement{
+	text-align: left;
+	margin: 20px;
+	line-height: 1.4;
+}
+
+.review{
+	opacity: 70%;
+	line-height: 1.7;
+	
+}
+
+
+/**RESPONSIVE WEB-TABLET**/
+@media only screen and (min-width: 768px) {
+    .container {
+		transform: scale(0.8);
+		display: grid;
+		grid-template-areas: 'cont1 cont1 cont2'
+							 'cont3 cont3 cont4'
+							 'cont5 cont5 cont5';
+    }
+	.container1 {
+        grid-area: cont1;
+    }
+    
+    .container2 {
+        grid-area: cont2;
+    }
+    
+    .container3 {
+        grid-area: cont4;
+    }
+    
+    .container4 {
+        grid-area: cont3;
+    }
+    
+    .container5 {
+        grid-area: cont5;
+	}
+}
+
+/** RESPONSIVE WEB - LAPTOP */
+
+@media only screen and (min-width: 1200px) {
+    .container {
+		transform: scale(0.8);
+		display: grid;
+		grid-template-areas: 'cont1 cont1 cont1 cont1 cont1 cont2 cont3'
+							 'cont4 cont5 cont5 cont5 cont5 cont5 cont3';
+    }
+	.container1 {
+        grid-area: cont1;
+    }
+    
+    .container2 {
+        grid-area: cont2;
+    }
+    
+    .container3 {
+        grid-area: cont4;
+    }
+    
+    .container4 {
+        grid-area: cont5;
+    }
+    
+    .container5 {
+        grid-area: cont3;
+	}
+}
